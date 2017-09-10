@@ -30,6 +30,7 @@ def get_quote_api(cat):
 def application(environ, start_response):
     path = environ['PATH_INFO']
     response = generate_random_qoute(quotes)
+    '''
     if path == '/qod':
         response = get_quote_api()
     elif path == '/inspire':
@@ -50,6 +51,7 @@ def application(environ, start_response):
         response = get_quote_api('students')
     elif path == 'theysaidso':
         response = they_said_so()
+    '''
 
     status = '200 OK'
     headers = [('Content-type', 'text/plain')]
