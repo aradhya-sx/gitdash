@@ -48,6 +48,8 @@ def application(environ, start_response):
         response = get_quote_api('art')   
     elif path == '/students':
         response = get_quote_api('students')
+    elif path == 'theysaidso':
+        response = they_said_so()
 
     status = '200 OK'
     headers = [('Content-type', 'text/plain')]
@@ -57,6 +59,6 @@ def application(environ, start_response):
 
 
 if __name__ == '__main__':
-    httpd = make_server('', 8001, application)
+    httpd = make_server('', 8000, application)
     print("Serving on port 8000...")
     httpd.serve_forever()
