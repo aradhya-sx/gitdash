@@ -16,7 +16,7 @@ def application(environ, start_response):
     method  = environ['REQUEST_METHOD']
     response = generate_random_qoute(quotes)
     status = '200 OK'
-    headers = [('Content-type', 'text/html')]
+    headers = [('Content-type', 'text/plain')]
 
     start_response(status, headers)
     return [response]
