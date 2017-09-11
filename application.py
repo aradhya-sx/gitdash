@@ -50,7 +50,7 @@ def application(environ, start_response):
         response = get_quote_api('art')   
     elif path == '/students':
         response = get_quote_api('students')
-    elif path == 'theysaidso':
+    elif path == '/theysaidso':
         response = they_said_so()
 
     status = '200 OK'
